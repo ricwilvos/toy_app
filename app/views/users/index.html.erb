@@ -2,7 +2,7 @@
 
 <h1>Users</h1>
 
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.mail %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-s btn-primary"><%= link_to 'Show', user %></td></button>
+        <td><button type="button" class="btn btn-s btn-success"><%= link_to 'Edit', edit_user_path(user) %></td></button>
+        <td><button type="button" class="btn btn-s btn-warning"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td></button>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<button type="button" class="btn btn-s btn-info"><%= link_to 'New User', new_user_path %></button>

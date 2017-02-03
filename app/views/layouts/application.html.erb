@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ToyApp</title>
+    <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      
+      <ul class="nav navbar-nav">
+        <li role="presentation"><a href="/">Index</a></li>
+        <li role="presentation"><a href="/home/about">About</a></li>
+        <li role="presentation"><a href="/home/contact">Contact</a></li>
+        <li role="presentation"><a href="/users">Users</a></a></li>
+        <li role="presentation"><a href="/microposts">Microposts</a></a></li>
+        
+        
+        
+        
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>
