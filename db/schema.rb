@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119175906) do
+ActiveRecord::Schema.define(version: 20170216001227) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170119175906) do
     t.string   "mail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
   end
 
 end
